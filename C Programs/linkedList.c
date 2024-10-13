@@ -167,12 +167,18 @@ void del_beg()
            count--;
   }
            
+         
+  
 void del_pos() {
     struct node *nextnode;
     int pos, i = 1;
+
+  
     printf("Enter the position: ");
     scanf("%d", &pos);
 
+
+    
     if (pos == 1) {
         del_beg();
     }
