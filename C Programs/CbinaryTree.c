@@ -30,20 +30,31 @@ int main() {
 
 struct node* create() {
     int item;
-    struct node *newnode = (struct node*)malloc(sizeof(struct node));
+    struct node *newnode;
 
     printf("\nEnter Data (-1 for no node): ");
     scanf("%d", &item);
 
+    // If the input is -1, return NULL to indicate no node
+    if (item == -1) {
+        return NULL;
+    }
 
+    // Allocate memory for the new node
+    newnode = (struct node*)malloc(sizeof(struct node));
     newnode->data = item;
+
+    // Recursively create the left and right children
     printf("Enter the left child of %d: ", item);
-    newnode->left = create();
+    newnode->left = create();  // Create left subtree
+
     printf("Enter the right child of %d: ", item);
-    newnode->right = create();
+    newnode->right = create(); // Create right subtree
 
     return newnode;
 }
+
+
 
 // In-order Traversal: Left -> Root -> Right
 void inorder(struct node* root) {
