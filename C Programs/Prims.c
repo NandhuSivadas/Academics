@@ -6,18 +6,19 @@ void main()
 	clrscr();
 	printf("Enter number of vertices\n");
 	scanf("%d",&n);
-	printf("Enter cost adjacenecy matrix\n");
-	for(i=1;i<=n;++i)
-	{
-		for(j=i;j<=n;++j)
-		{
-			printf("Enter cost of edge(%d,%d)",i,j);
-			scanf("%d",&cost[i][j]);
-			if(cost[i][j]==0)
-				cost[i][j]=999;
-			cost[j][i]=cost[i][j];
-		}
-	}
+	printf("Enter cost adjacency matrix\n");
+for(i=1; i<=n; ++i)
+{
+    for(j=i+1; j<=n; ++j) // Start from j = i+1 to skip self-loops
+    {
+        printf("Enter cost of edge(%d,%d): ", i, j);
+        scanf("%d", &cost[i][j]);
+        if(cost[i][j] == 0)
+            cost[i][j] = 999; // Replace 0 with a large number for non-existent edges
+        cost[j][i] = cost[i][j]; // Make the matrix symmetric
+    }
+}
+
 	printf("Cost Adjacency Matrix \n");
 	for(i=1;i<=n;++i)
 	{
