@@ -86,3 +86,18 @@ public class ShapeComparisonDemo {
         sc.close();
     }
 }
+
+
+// output
+
+// Enter the cuboid's length, width, and height:
+// 12
+// 3
+// 4
+// Enter the cylinder's radius and height:
+// 2
+// 4
+
+// Cuboid Volume: 144.0
+// Cylinder Volume: 50.26548245743669
+// Cuboid has a larger volume than the cylinder.

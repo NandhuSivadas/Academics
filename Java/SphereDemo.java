@@ -110,3 +110,24 @@ public class SphereDemo {
         sc.close(); 
     }
 }
+
+// output
+
+// Enter length:
+// 12
+// Enter width:
+// 10
+// Enter radius:
+// 3
+
+// Rectangle Details:
+// Length: 12.0 Width: 10.0
+// Area: 120.0
+// Perimeter: 44.0
+// Drawing a rectangle...
+
+// Sphere Details:
+// Radius: 3.0
+// Surface Area: 113.03999999999999
+// Volume: 113.03999999999998
+// Drawing a sphere...
