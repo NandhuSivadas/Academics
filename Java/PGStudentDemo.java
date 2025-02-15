@@ -100,3 +100,67 @@ class PGStudentDemo {
         sc.close();
     }
 }
+
+
+
+// output
+// Enter the number of persons:
+// 2
+
+// Enter details for Student 1:
+// Enter name: Nandhu
+// Enter gender: male
+// Enter phone: 123456789 
+// Enter course: mca
+// Enter score: 600
+// Enter research area: Cloud computing
+// Enter guide: sonia miss
+
+// Enter details for Student 2:
+// Enter name: Radhika
+// Enter gender: female
+// Enter phone: 23456789
+// Enter course: mca
+// Enter score: 550
+// Enter research area: AI
+// Enter guide: Sonia miss
+
+// Displaying PG Student Details (Sorted by Research Area):
+
+// PG Student Details:
+// Name: Radhika
+// Gender: female
+// Phone: 2.3456789E7
+// Course: mca
+// Score: 550.0
+// Research Area: AI
+// Guide: Sonia miss
+
+// PG Student Details:
+// Name: Nandhu
+// Gender: male
+// Phone: 1.23456789E8
+// Course: mca
+// Score: 600.0
+// Research Area: Cloud computing
+// Guide: sonia miss
+
+// Displaying PG Student Details (Sorted by Score - Descending Order):
+
+// PG Student Details:
+// Name: Nandhu
+// Gender: male
+// Phone: 1.23456789E8
+// Course: mca
+// Score: 600.0
+// Research Area: Cloud computing
+// Guide: sonia miss
+
+// PG Student Details:
+// Name: Radhika
+// Gender: female
+// Phone: 2.3456789E7
+// Course: mca
+// Score: 550.0
+// Research Area: AI
+// Guide: Sonia miss
