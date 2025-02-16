@@ -17,3 +17,11 @@ public class DimDemo {
         System.out.println("Surface Area of Sphere (radius = 6): " + sphere.area(6));
     }
 }
+
+
+// output
+
+// Area of Square (side = 4): 16.0
+// Surface Area of Cube (side = 3): 54.0
+// Area of Circle (radius = 5): 78.53981633974483
+// Surface Area of Sphere (radius = 6): 452.3893421169302
