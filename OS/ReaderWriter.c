@@ -11,7 +11,7 @@ void reader(int id) {
     printf("Reader %d is reading data\n", id);
 
     mutex++;  
-
+}
 
 void writer(int id) {
     while (mutex <= 0); 
