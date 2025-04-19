@@ -1,0 +1,4 @@
+1.Provide privilege to run
+    command: chmod +x filename
+2.run file
+    command: ./filename
