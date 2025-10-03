@@ -4,51 +4,48 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity {
 
-    EditText etEmail, etPassword;
-    Button btnLogin;
-    CheckBox cbSaveLogin;
+    EditText etFirstName, etLastName, etEmail, etPassword;
+    Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
+        etFirstName = findViewById(R.id.etFirstName);
+        etLastName = findViewById(R.id.etLastName);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
-        cbSaveLogin = findViewById(R.id.cbSaveLogin);
-        btnLogin = findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
 
-        btnLogin.setOnClickListener(this);
-    }
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String firstName = etFirstName.getText().toString();
+                String lastName = etLastName.getText().toString();
+                String email = etEmail.getText().toString();
+                String password = etPassword.getText().toString();
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.btnLogin) {
-            String email = etEmail.getText().toString();
-            String password = etPassword.getText().toString();
-
-            if (email.equals("Nandhu") && password.equals("12345")) {
-                if (cbSaveLogin.isChecked()) {
-                    Toast.makeText(this, "Login Successful (Saved)", Toast.LENGTH_SHORT).show();
+                if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(RegisterActivity.this, "Fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    // Pass data to Login Activity
+                    Intent i = new Intent(RegisterActivity.this, MainActivity.class);
+                    i.putExtra("firstName", firstName);
+                    i.putExtra("lastName", lastName);
+                    i.putExtra("email", email);
+                    i.putExtra("password", password);
+                    startActivity(i);
+                    finish();
                 }
-
-                Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                i.putExtra("email", email);
-                startActivity(i);
-
-            } else {
-                Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show();
             }
-        }
+        });
     }
 }

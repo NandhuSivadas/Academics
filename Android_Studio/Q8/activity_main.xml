@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <!-- Input for Subject 1 -->
+    <EditText
+        android:id="@+id/etSub1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks of Subject 1"
+        android:inputType="number"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Input for Subject 2 -->
+    <EditText
+        android:id="@+id/etSub2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks of Subject 2"
+        android:inputType="number"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Input for Subject 3 -->
+    <EditText
+        android:id="@+id/etSub3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks of Subject 3"
+        android:inputType="number"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Button to calculate -->
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Result"
+        android:padding="10dp" />
+
+    <!-- ImageView for Result -->
+    <ImageView
+        android:id="@+id/imgResult"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:contentDescription="Result face" />
+
+</LinearLayout>
