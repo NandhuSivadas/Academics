@@ -28,11 +28,11 @@ plt.legend()
 plt.show()
 
 # (ii) Predict accidents for ages 40 and 60
-pred_40 = model.predict([[40]])
-pred_60 = model.predict([[60]])
+    
+n=int(input("Ente the car age:"))
+predict_ac=model.predict([[n]])
+print(f"Predicted number of accident: {predict_ac[0]:.2f}")
 
-print(f"Predicted number of accidents for age 40: {pred_40[0]:.2f}")
-print(f"Predicted number of accidents for age 60: {pred_60[0]:.2f}")
 
 # Display regression equation
 # print(f"\nEquation of the line: y = {model.coef_[0]:.2f}x + {model.intercept_:.2f}")

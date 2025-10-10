@@ -28,7 +28,12 @@ plt.legend()
 plt.show()
 
 # (ii) Predict car_speed for car_age = 14
-predicted_speed = model.predict([[14]])
-print(f"Predicted car speed for car age 14 years: {predicted_speed[0]:.2f}")
+
+n=int(input("Ente the car age:"))
+predicted_speed=model.predict([[n]])
+
+
+
+print(f"Predicted car speed : {predicted_speed[0]:.2f}")
 
 
