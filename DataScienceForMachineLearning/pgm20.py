@@ -38,13 +38,20 @@ y_pred = model_gini.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"1️⃣ Accuracy (Gini): {accuracy * 100:.2f}%\n")
 
-# Confusion matrix
-cm = confusion_matrix(y_test, y_pred)
-disp = ConfusionMatrixDisplay(confusion_matrix=cm)
-disp.plot(cmap='Greens')
-plt.title("2️⃣ Confusion Matrix - Gini")
-plt.show()
 
+# 1. Compute confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+
+# 2. Print confusion matrix
+print("Confusion Matrix:")
+print(cm)
+
+# 3. Visualize confusion matrix
+plt.figure(figsize=(6, 5))
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot(cmap='Blues', values_format='d')
+plt.title("Confusion Matrix")
+plt.show()
 # Classification report
 print("3️⃣ Classification Report:\n", classification_report(y_test, y_pred))
 

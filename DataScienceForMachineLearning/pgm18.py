@@ -41,7 +41,7 @@ if n_clusters > 1:
     print("Silhouette Score:", round(score, 3))
 else:
     print("Silhouette Score: Not applicable (only one cluster or all noise)")
-
+ 
 # Step 11: Visualize clusters
 plt.figure(figsize=(8,6))
 plt.scatter(scaled_data[:,0], scaled_data[:,1], c=labels, cmap='rainbow', s=50)
